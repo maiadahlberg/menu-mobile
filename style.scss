@@ -20,6 +20,9 @@ a{
 
         }
         .menu-icon{
+            @media (min-width: 768px){
+                display: none;
+            }
             .line{
                 background-color: $lightcolor;
                 width: 25px;
@@ -48,11 +51,19 @@ a{
             list-style: none;
             flex: 0 0 100%;
             display:none;
+            @media (min-width: 768px){
+                display: flex;
+                justify-content: space-between;
+                flex: 0 0 60%;
+            }
             &.active{
                 height: 100vh;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                @media (min-width: 768px){
+                    height: initial;
+                }
             }
             
 
@@ -60,6 +71,10 @@ a{
                 flex: 0 0 100%;
                 padding: 1rem 0;
                 text-align: center;
+                @media (min-width: 768px){
+                    flex: 0 0 auto;
+                    padding: 0;
+                }
 
             }
         }
